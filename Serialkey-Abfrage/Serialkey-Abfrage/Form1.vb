@@ -11,7 +11,7 @@
 1:      EnteredSerial = InputBox("Bitte geben Sie hier Ihren Serial Key ein!", "Serialkey")
         If EnteredSerial = "" Then GoTo 1
 
-        Serials = Web.DownloadString("file:///C:/xampp/htdocs/Serials.txt")
+        Serials = Web.DownloadString("https://github.com/DavHil/Serialkey-Abfrage/blob/master/Serialkey-Abfrage/Serialkey-Abfrage/Serials.txt")
         If Not Serials.Contains(EnteredSerial) Then
             MsgBox("Fehlgeschlagen")
             Application.Exit()
